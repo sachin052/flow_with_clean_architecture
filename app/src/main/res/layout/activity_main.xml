@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="vm"
+            type="com.example.flowexample.features.posts.presentation.MainActivityViewModel" />
+    </data>
+   <com.example.flowexample.core.views.ViewStatusLayout
+       android:layout_width="match_parent"
+       app:status="@{vm.uiState}"
+       android:layout_height="match_parent">
+       <androidx.appcompat.widget.LinearLayoutCompat
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+           <androidx.core.widget.NestedScrollView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   tools:context=".MainActivity">
+
+                 <androidx.recyclerview.widget.RecyclerView
+                     android:layout_width="match_parent"
+                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                     android:id="@+id/rv_main"
+                     android:layout_height="wrap_content"/>
+
+               </androidx.appcompat.widget.LinearLayoutCompat>
+
+           </androidx.core.widget.NestedScrollView>
+       </androidx.appcompat.widget.LinearLayoutCompat>
+   </com.example.flowexample.core.views.ViewStatusLayout>
+</layout>

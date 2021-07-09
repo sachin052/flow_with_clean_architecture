@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Flow Example</string>
+    <string name="retry">Retry</string>
+</resources>
